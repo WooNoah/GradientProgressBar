@@ -25,7 +25,6 @@
     progressView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:progressView];
 
-    一个渐变进度条，使用CAGradientLayer和CAShapeLayer实现
     
     [progressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(300, 16));
