@@ -1,1 +1,3 @@
+
 # GradientProgressBar
+一个渐变进度条，使用CAShapeLayer和CAGradientLayer实现
