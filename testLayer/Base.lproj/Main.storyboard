@@ -47,7 +47,20 @@
                     <view key="view" contentMode="scaleToFill" id="mBQ-Vs-8T1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huF-KM-dvB">
+                                <rect key="frame" x="142" y="350.5" width="90" height="30"/>
+                                <state key="normal" title="Click to Push"/>
+                                <connections>
+                                    <segue destination="aTl-Z1-s9s" kind="push" id="5oj-eY-a97"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="huF-KM-dvB" firstAttribute="centerY" secondItem="uFb-rQ-9EC" secondAttribute="centerY" id="5Y6-Ke-zZV"/>
+                            <constraint firstItem="huF-KM-dvB" firstAttribute="centerX" secondItem="uFb-rQ-9EC" secondAttribute="centerX" id="mOt-N0-WJp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uFb-rQ-9EC"/>
                     </view>
                     <navigationItem key="navigationItem" id="KaS-m5-ANo"/>
@@ -55,6 +68,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZL-dJ-PRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2568.8000000000002" y="33.733133433283363"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="39E-vE-vre">
+            <objects>
+                <viewController id="aTl-Z1-s9s" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWY-pH-FRm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2q-nW-1m4" customClass="OpenAccountProgressView">
+                                <rect key="frame" x="67" y="129" width="240" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="dpc-hT-QN3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此进度条由storyboard创建" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGP-IE-IXS">
+                                <rect key="frame" x="84.5" y="157" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P2q-nW-1m4" firstAttribute="centerX" secondItem="Xga-dL-mq3" secondAttribute="centerX" id="9yp-3G-1Xf"/>
+                            <constraint firstItem="P2q-nW-1m4" firstAttribute="top" secondItem="Xga-dL-mq3" secondAttribute="top" constant="65" id="Iyf-vw-oZZ"/>
+                            <constraint firstItem="mGP-IE-IXS" firstAttribute="top" secondItem="P2q-nW-1m4" secondAttribute="bottom" constant="8" id="NJf-xo-nON"/>
+                            <constraint firstItem="P2q-nW-1m4" firstAttribute="leading" secondItem="Xga-dL-mq3" secondAttribute="leading" constant="67" id="PBM-fv-9aj"/>
+                            <constraint firstItem="mGP-IE-IXS" firstAttribute="centerX" secondItem="Xga-dL-mq3" secondAttribute="centerX" id="xAD-og-xgQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xga-dL-mq3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Fx-AG-qGY"/>
+                    <connections>
+                        <outlet property="progressBar" destination="P2q-nW-1m4" id="RBe-QB-fKD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JrH-po-jeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3354" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KMS-Zg-zVg">

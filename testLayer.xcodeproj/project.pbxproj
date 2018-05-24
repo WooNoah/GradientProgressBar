@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F91493720B6579D00A73C4B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F91493620B6579D00A73C4B /* ThirdViewController.m */; };
+		4F91493A20B658B900A73C4B /* EvenOddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F91493920B658B900A73C4B /* EvenOddView.m */; };
 		4FDF3E4C20B513AE003C06D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF3E4B20B513AE003C06D5 /* AppDelegate.m */; };
 		4FDF3E4F20B513AE003C06D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF3E4E20B513AE003C06D5 /* ViewController.m */; };
 		4FDF3E5220B513AE003C06D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDF3E5020B513AE003C06D5 /* Main.storyboard */; };
@@ -21,6 +23,10 @@
 /* Begin PBXFileReference section */
 		1E1431877D64E3D7908E6D09 /* Pods-testLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-testLayer/Pods-testLayer.release.xcconfig"; sourceTree = "<group>"; };
 		33D2C7DFB653B7234747A8DF /* libPods-testLayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testLayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F91493520B6579D00A73C4B /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		4F91493620B6579D00A73C4B /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		4F91493820B658B900A73C4B /* EvenOddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvenOddView.h; sourceTree = "<group>"; };
+		4F91493920B658B900A73C4B /* EvenOddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EvenOddView.m; sourceTree = "<group>"; };
 		4FDF3E4720B513AE003C06D5 /* testLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDF3E4A20B513AE003C06D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FDF3E4B20B513AE003C06D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +83,10 @@
 				4FDF3E4E20B513AE003C06D5 /* ViewController.m */,
 				4FDF3E6320B514C2003C06D5 /* SecViewController.h */,
 				4FDF3E6420B514C2003C06D5 /* SecViewController.m */,
+				4F91493520B6579D00A73C4B /* ThirdViewController.h */,
+				4F91493620B6579D00A73C4B /* ThirdViewController.m */,
+				4F91493820B658B900A73C4B /* EvenOddView.h */,
+				4F91493920B658B900A73C4B /* EvenOddView.m */,
 				4FDF3E6020B513BB003C06D5 /* OpenAccountProgressView.h */,
 				4FDF3E6120B513BB003C06D5 /* OpenAccountProgressView.m */,
 				4FDF3E5020B513AE003C06D5 /* Main.storyboard */,
@@ -199,6 +209,8 @@
 			files = (
 				4FDF3E4F20B513AE003C06D5 /* ViewController.m in Sources */,
 				4FDF3E5A20B513AF003C06D5 /* main.m in Sources */,
+				4F91493720B6579D00A73C4B /* ThirdViewController.m in Sources */,
+				4F91493A20B658B900A73C4B /* EvenOddView.m in Sources */,
 				4FDF3E4C20B513AE003C06D5 /* AppDelegate.m in Sources */,
 				4FDF3E6520B514C2003C06D5 /* SecViewController.m in Sources */,
 				4FDF3E6220B513BB003C06D5 /* OpenAccountProgressView.m in Sources */,
@@ -344,7 +356,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = testLayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qs.testLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,7 +373,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = testLayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qs.testLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
