@@ -41,10 +41,10 @@
     UIBezierPath *innerCircle = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(self.bounds, 30, 30)];
     [innerCircle setLineWidth:2.0];
     [bezierPath appendPath:innerCircle];
-//    bezierPath.usesEvenOddFillRule = YES;
+    bezierPath.usesEvenOddFillRule = YES;
     
     shapelayer.path = bezierPath.CGPath;
-    shapelayer.fillRule = @"even-odd";
+//    shapelayer.fillRule = @"even-odd";
     shapelayer.fillRule = kCAFillRuleEvenOdd;
     shapelayer.fillColor = [UIColor orangeColor].CGColor;
     shapelayer.strokeColor = [UIColor yellowColor].CGColor;
