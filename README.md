@@ -220,6 +220,17 @@ fillRule属性，一共有两个值：
 计算最后Count的值，
 **如果count为0，则该点在路径外边**
 **如果count不为0，则该点在路径里边**
+![](https://upload-images.jianshu.io/upload_images/1241385-7c146fa95deebf2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+下面是一个五角星的实例，我们来看下两种规则的判断：
+![](https://upload-images.jianshu.io/upload_images/1241385-a4d650c7999e2520.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+* 先看nozero时，怎么判断点是否在内部区域。
+射线1和图形线段只有一个交点，为从左到右，所以结果是1，判定为内部区域；射线2有两个交点，都是从左到右，结果是2，内部区域；射线3有三个交点，两个从左到右，一个从右到左，结果是1，内部区域；射线4有四个交点，两个从左到右，两个从右到左，结果是0，所以是外部区域。
+
+* evenodd时，
+只判断交点个数，所以1,3都是内部区域，2，4都是外部区域。
+
+
 
 ***一般来说，`kCAFillRuleNonZero`和`kCAFillRuleEvenOdd`的结果是相反的（非常复杂的图形除外）***
 
