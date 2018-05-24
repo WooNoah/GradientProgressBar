@@ -1,9 +1,9 @@
 >我们都知道可以通过UIBezierPath+CAShapeLayer来绘制我们想要的各种效果，本篇文章不再赘述这些问题，就说一下在使用这些类的时候，遇到的一些问题：
 
-####1. 在UIView或者其子类中，如果要使用`CAShapeLayer`，那么：**不要使用懒加载！！不要使用懒加载！！不要使用懒加载**
+#### 1. 在UIView或者其子类中，如果要使用`CAShapeLayer`，那么：**不要使用懒加载！！不要使用懒加载！！不要使用懒加载**
 今天在项目中如此写的时候，懒加载了`ShapeLayer`，然后Layer就不能正常的绘制上去了
 
-####2. `- (void)layoutSublayersOfLayer:(CALayer *)layer`方法的使用
+#### 2. `- (void)layoutSublayersOfLayer:(CALayer *)layer`方法的使用
 遇到在初始化的时候没有使用`initWithFrame`方法的情况，或者在外部使用`Masonry`设置约束的情况，
 
 此时，我们可以在View的`- (void)layoutSublayersOfLayer:(CALayer *)layer`方法中设置frame相关参数
@@ -39,7 +39,7 @@ UIBezierPath *colorPath = [UIBezierPath bezierPath];
 [colorPath addArcWithCenter:CGPointMake(_smallRadius, _bigRadius) radius:_smallRadius startAngle:M_PI endAngle:3*M_PI_2 clockwise:YES];
 [colorPath addLineToPoint:CGPointMake(currentX-20-2, kPVRadiusOffSet)];
 ```
-####3. UIBezierPath提供的绘制曲线的API
+#### 3. UIBezierPath提供的绘制曲线的API
 一共有两种：
 * `addQuadCurveToPoint:controlPoint`
 此方法绘制的是二次曲线，入参只需要一个controlPoint(控制点)
@@ -78,11 +78,11 @@ P1P2之间的距离决定了曲线由向着P1转向P2的距离和速度
 ![高阶曲线.gif](https://upload-images.jianshu.io/upload_images/1241385-ebeaf74fadccf431.gif?imageMogr2/auto-orient/strip)
 大佬们自己去研究吧。。。
 
-####4. 提供一些网址，可以直观的展现贝塞尔曲线的效果
+#### 4. 提供一些网址，可以直观的展现贝塞尔曲线的效果
 
 http://blogs.sitepointstatic.com/examples/tech/canvas-curves/bezier-curve.html
 
-####5. CAGradientLayer和CAShapeLayer的结合使用(做一个有渐变色底色不规则形状的进度条)
+#### 5. CAGradientLayer和CAShapeLayer的结合使用(做一个有渐变色底色不规则形状的进度条)
 >思路如下：
 UIView和CALayer都有一个属性： mask
 我们可以先使用CAShapeLayer绘制出个性形状的图像之后，
@@ -261,10 +261,10 @@ shapelayer.opacity = 0.5;
 
 
 
-####如果有想要看源码的，请移步[GitHub](https://github.com/WooNoah/GradientProgressBar)
+#### 如果有想要看源码的，请移步[GitHub](https://github.com/WooNoah/GradientProgressBar)
 如果您觉得此篇文章帮到了您，请**给个Star**，谢谢！
 
-####参考资料
+#### 参考资料
 https://stackoverflow.com/questions/6711707/draw-a-quadratic-b%C3%A9zier-curve-through-three-given-points
 
 https://zhuanlan.zhihu.com/p/23381083
